@@ -1,0 +1,66 @@
+﻿@model scaffoldpractice.studentfile
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Detail</h2>
+
+<div>
+    <h4>studentfile</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.stdno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stdno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stdaddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stdaddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.deptid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.deptid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stdname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stdname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fees)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fees)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.genderid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.genderid)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.stdid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

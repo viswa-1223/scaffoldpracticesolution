@@ -1,0 +1,63 @@
+﻿@model IEnumerable<scaffoldpractice.studentfile>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.stdno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.stdaddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.deptid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.stdname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fees)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.genderid)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.stdno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.stdaddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.deptid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.stdname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fees)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.genderid)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.stdid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.stdid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.stdid })
+        </td>
+    </tr>
+}
+
+</table>
